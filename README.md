@@ -1,5 +1,3 @@
-# Description of the dataset 
-
 ## Structure of the file
 
 | Column name | Type | Units | Description |
@@ -42,7 +40,47 @@
 ## Licence
 This dataset is distributed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
-## Citation
-Authors: Laura Sereni,Hélène Angot,Erfan Jahangir
-Dataset Title: MFaLLDa (Mercury litter and throughFALL Database)
-Zenodo (2025), DOI: 10.5281/zenodo.17554035
+## For Future Contributors: 
+##Citing this dataset
+
+If you use, modify, or build upon this dataset, please cite the original Zenodo record:
+
+> Laura, S., & Angot,H. &Jahangir,E. MFaLLDa (Mercury litter and throughFALL Database) Zenodo. https://doi.org10.5281/zenodo.17554035
+
+You may also reference a specific version using its version-specific DOI (see the Zenodo page for all versions).
+Citing the DOI ensures reproducibility and proper attribution to the original authors.
+
+---
+
+## Contribution and branch strategy
+
+### Main branches
+- **main** → Stable, published version of the dataset (matches the latest Zenodo release).  
+- **dev** → Working branch for upcoming updates, additions, or documentation improvements.
+
+All changes should be proposed as **pull requests (PRs)** against the `dev` branch.  
+Once reviewed and validated, changes from `dev` are merged into `main`, and a new **release** is created.
+
+> Each GitHub release triggers an automatic Zenodo archive and DOI.
+
+---
+
+##  Workflow for contributors
+1. Fork the repository or create a new branch from `dev`.  
+2. Add your contributions (data, corrections, or documentation).  
+3. Submit a pull request (PR) to merge your changes into the `dev` branch.  
+4. The maintainers will review and merge your PR before the next official release.
+
+---
+
+##  Forks and derived datasets
+
+If you **fork** this repository to create a derivative dataset:
+- Please **cite** the original Zenodo record above.  
+- Add a note in your Zenodo metadata such as:  
+  > "Derived from *MFaLLDa (Mercury litter and throughFALL Database)* (Sereni et al.2025) Zenodo. https://doi.org10.5281/zenodo.17554035"
+- You are encouraged to release your derived work under an open license and assign your own Zenodo DOI.
+
+Forks and derivatives are welcome — but the **official, citable versions** of this dataset are maintained in this main repository.
+
+
