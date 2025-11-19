@@ -41,9 +41,10 @@ This dataset provides an open-access, standardized resource to improve spatially
 | DOI | Text | - | DOI of article, starting with “10.” |
 
 ---
-## Licence
+## License
 
 This dataset is distributed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+If you use or modify this dataset in your work, please refer to the `CITATION.cff` file for citation information.
 
 ---
 
@@ -56,12 +57,14 @@ This dataset is distributed under the [Creative Commons Attribution 4.0 Internat
 All changes should be proposed as **pull requests (PRs)** against the `dev` branch.  
 Once reviewed and validated, changes from `dev` are merged into `main`, and a new **release** is created.
 
+
 ---
 
 ###  Workflow for contributors 
-1. Fork the branch `dev`.  
-2. Add your contributions (data, corrections, or documentation).  
-3. Submit a pull request to merge your changes into the `dev` branch.  
-4. The maintainers will review and merge your PR before the next official release.
+
+1. Fork this repository and create a new branch from `dev` in your fork.  
+2. Add your contributions (data, corrections, or documentation). For convenience, you may use the template CSV file available in the repository.  
+3. Submit a pull request (PR) from your branch to the `dev` branch of this repository.  
+4. The maintainers will review your PR and merge it into `dev` before the next official release.
 
 
