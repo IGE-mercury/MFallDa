@@ -7,38 +7,38 @@ This dataset provides an open-access, standardized resource to improve spatially
 
 | Column name | Type | Units | Description |
 |--------------|------|--------|--------------|
-| AuthorYear | Text | - | Concatenation of first author name and year of publication, identifier of publication |
+| AuthorYear | Text | - | Concatenation of first author name and year of publication; identifier of the publication |
 | TitleStudy | Text | - | Title of the study |
 | Location | Text | - | Brief description of the sampling area (region – administrative region or province – country) |
-| Continent | Text | - | Continent of sampling (Africa, Asia, Europe, North America, South America) |
+| Continent | Text | - | Continent of sampling (Africa, Asia, Europe, North America, South America, Oceania) |
 | Latitude_N | Numeric | Degree north (decimal) | Latitude of sampling |
 | Longitude_E | Numeric | Degree east (decimal) | Longitude of sampling |
-| Altitude | Numeric | m | Above-sea-level altitude of sampling |
-| StudyYear | Numeric | YYYY | Period of sampling (Year start – Year end) |
-| SampleId | Text | - | Identifier of the measurement in the study; when not provided, constructed from LandType(+_Year) or Tissues(+_Year). Each ID corresponds to one measurement. |
-| LandCover | Text | - | Description of the land cover, variable level of detail depending on the article |
-| LandType | Categorical | DBF, ENF, RBF, EBF, Grass, Mixed, Mangrove, Savanna, Shrubs, Urban | Categorical description of land cover type |
-| Vegetation | Text | - | Plant species reported in the article |
-| Climate | Categorical | Af, Am, Aw, BSh, BWk, BWh, Cfa, Cfb, Csb, Cwa, Cwb, Dfa, Dfb, Dfc, Dwa, Dwb, Dwc | Climate classification (Köppen-Geiger) |
-| AnnualPrecip_Volumemm | Numerical | mm | Annual precipitation volume; bold values represent site means reported in the article |
-| MethodLitterfall | Text | - | Description of litterfall sampling procedure and period |
-| MethodThroughfall | Text | - | Description of throughfall sampling procedure and period |
+| Altitude | Numeric | m | Above-sea-level altitude of the sampling site |
+| StudyYear | Numeric | YYYY | Sampling period (start year – end year) |
+| SampleId | Text | - | Identifier of the measurement; if not provided, constructed from LandType(+_Year) or Tissues(+_Year). Each ID corresponds to one measurement. |
+| LandCover | Text | - | Description of land cover; level of detail varies depending on the article |
+| LandType | Categorical | DBF, ENF, RBF, EBF, Grass, Mixed, Mangrove, Savanna, Shrubs, Urban | Standardized land cover category |
+| Vegetation | Text | - | Plant species reported in the study |
+| Climate | Categorical | Af, Am, Aw, BSh, BWk, BWh, Cfa, Cfb, Csb, Cwa, Cwb, Dfa, Dfb, Dfc, Dwa, Dwb, Dwc | Köppen-Geiger climate classification |
+| AnnualPrecip_Volume_mm | Numerical | mm | Annual precipitation volume; bold values indicate site means reported in the article |
+| MethodLitterfall | Text | - | Litterfall sampling protocol and sampling period |
+| MethodThroughfall | Text | - | Throughfall sampling protocol and sampling period |
 | AnnualThroughfall_Volume_mm | Numeric | mm | Annual throughfall depth |
 | Tissues | Categorical | Total, Needles, Leaves, Fruits, Bark, Misc, Twigs, Lichens | Litterfall plant tissues collected (“Total” = unsorted litterfall) |
-| LitterfallHg_MeanConcentration_ngg | Numerical | ng Hg g⁻¹ dry matter | Mean Hg concentration in litterfall, averaged over replicates and sampling period |
-| LitterfallHg_AnnualMeanFlux_ugm2 | Numerical | µg Hg m⁻² yr⁻¹ | Annual flux of Hg deposited through litterfall |
+| LitterfallHg_MeanConcentration_ngg | Numerical | ng Hg g⁻¹ dry matter | Mean THg concentration in litterfall, averaged over replicates and sampling period |
+| LitterfallHg_AnnualMeanFlux_ugm2 | Numerical | µg Hg m⁻² yr⁻¹ | Annual THg flux deposited through litterfall |
 | LitterfallMeHg_MeanConcentration_ngg | Numerical | ng MeHg g⁻¹ dry matter | Mean MeHg concentration in litterfall, averaged over replicates and sampling period |
-| LitterfallMeHg_AnnualMeanFlux_ugm2yr | Numerical | µg MeHg m⁻² yr⁻¹ | Annual flux of MeHg deposited through litterfall |
-| LitterfallBiomass_gm2yr | Numerical | g dry matter m⁻² yr⁻¹ | Annual biomass deposited through litterfall |
-| WVMC_TF_Hg_ngL | Numerical | ng Hg L⁻¹ | Volume-weighted mean concentration of Hg in throughfall (only two articles report this explicitly) |
-| TF_AnnualMeanConcentration_Hg_ngL | Numerical | ng Hg L⁻¹ | Annual mean concentration of Hg in throughfall |
-| TF_AnnualMeanConcentration_MeHg_ngL | Numerical | ng MeHg L⁻¹ | Annual mean concentration of MeHg in throughfall |
-| OpenPrecipitation_AnnualMeanConcentration_MeHg_ngL | Numerical | ng MeHg L⁻¹ | Annual mean concentration of MeHg in open precipitation |
-| OpenPrecipitation_AnnualMeanFlux_Hg_ugm2yr | Numerical | µg Hg m⁻² yr⁻¹ | Annual mean flux of Hg in open precipitation |
-| OpenPrecipitation_AnnualMeanFlux_MeHg_ugm2yr | Numerical | µg MeHg m⁻² yr⁻¹ | Annual mean flux of MeHg in open precipitation |
-| OpenPrecipitation_AnnualMeanConcentration_Hg_ngL | Numerical | ng Hg L⁻¹ | Annual mean concentration of Hg in open precipitation |
-| Flag | Text | - | Supplementary information about sampling procedure, data, or contamination |
-| DOI | Text | - | DOI of article, starting with “10.” |
+| LitterfallMeHg_AnnualMeanFlux_ugm2yr | Numerical | µg MeHg m⁻² yr⁻¹ | Annual MeHg flux deposited through litterfall |
+| LitterfallBiomass_gm2yr | Numerical | g dry matter m⁻² yr⁻¹ | Annual biomass flux through litterfall |
+| WVMC_TF_Hg_ngL | Numerical | ng Hg L⁻¹ | Volume-weighted mean concentration of THg in throughfall (reported explicitly in only two studies) |
+| TF_AnnualMeanConcentration_Hg_ngL | Numerical | ng Hg L⁻¹ | Annual mean THg concentration in throughfall |
+| TF_AnnualMeanConcentration_MeHg_ngL | Numerical | ng MeHg L⁻¹ | Annual mean MeHg concentration in throughfall |
+| OpenPrecipitation_AnnualMeanConcentration_MeHg_ngL | Numerical | ng MeHg L⁻¹ | Annual mean MeHg concentration in open precipitation |
+| OpenPrecipitation_AnnualMeanFlux_Hg_ugm2yr | Numerical | µg Hg m⁻² yr⁻¹ | Annual mean THg flux in open precipitation |
+| OpenPrecipitation_AnnualMeanFlux_MeHg_ugm2yr | Numerical | µg MeHg m⁻² yr⁻¹ | Annual mean MeHg flux in open precipitation |
+| OpenPrecipitation_AnnualMeanConcentration_Hg_ngL | Numerical | ng Hg L⁻¹ | Annual mean THg concentration in open precipitation |
+| Flag | Text | - | Additional information about sampling procedure, data quality, or contamination issues |
+| DOI | Text | - | DOI of the article (starting with “10.”) |
 
 ---
 ## License
