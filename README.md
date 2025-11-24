@@ -54,8 +54,8 @@ If you use or modify this dataset in your work, please refer to the `CITATION.cf
 - **main** → Stable, published version of the dataset (matches the latest Zenodo release).  
 - **dev** → Working branch for upcoming updates, additions, or documentation improvements.
 
-All changes should be proposed as **pull requests (PRs)** against the `dev` branch.  
-Once reviewed and validated, changes from `dev` are merged into `main`, and a new **release** is created.
+All changes should be proposed as **pull requests (PRs)** targeting the `dev` branch.  
+After review and validation, changes in `dev` are merged into `main`, and a new **release** is created.
 
 
 ---
@@ -63,8 +63,8 @@ Once reviewed and validated, changes from `dev` are merged into `main`, and a ne
 ###  Workflow for contributors 
 
 1. Fork this repository and create a new branch from `dev` in your fork.  
-2. Add your contributions (data, corrections, or documentation). For convenience, you may use the template CSV file available in the repository.  
+2. Add your contributions (new data, corrections, or documentation updates). A template CSV file is provided for convenience.  
 3. Submit a pull request (PR) from your branch to the `dev` branch of this repository.  
-4. The maintainers will review your PR and merge it into `dev` before the next official release.
+4. The maintainers will review your PR and merge it into `dev` in preparation for the next official release.
 
 
