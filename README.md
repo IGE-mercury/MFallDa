@@ -1,45 +1,16 @@
 ## Description 
-MFallda is the first global dataset that compiles and harmonizes all available measurements of total mercury (THg) and methylmercury (MeHg) concentrations and fluxes in litterfall (LF) and throughfall (TF). It contains data collected between 1987 and 2024 from 147 sites spanning all major biomes, accompanied by detailed metadata on ecosystem type, sampling protocols, precipitation, wet deposition, and Köppen–Geiger climate classification.
+MFallDa is the first global dataset that compiles and harmonizes all available measurements of total mercury (THg) and methylmercury (MeHg) concentrations and fluxes in litterfall (LF) and throughfall (TF). It contains data collected between 1987 and 2024 from 147 sites spanning all major biomes, accompanied by detailed metadata on ecosystem type, sampling protocols, precipitation, wet deposition, and Köppen–Geiger climate classification.
 
 This open-access, standardized dataset provides a foundation for improving spatially explicit estimates of vegetation-mediated Hg inputs to soils, refining inter- and intra-site Hg budgets, and supporting model calibration and validation from regional to global scales. A contribution template is included to facilitate community data sharing and ensure regular updates.
 
 
-## Structure of the file
+## Structure of the Repository
 
-| Column name | Type | Units | Description |
-|--------------|------|--------|--------------|
-| AuthorYear | Text | - | Concatenation of first author name and year of publication; identifier of the publication |
-| TitleStudy | Text | - | Title of the study |
-| Location | Text | - | Brief description of the sampling area (region – administrative region or province – country) |
-| Continent | Text | - | Continent of sampling (Africa, Asia, Europe, North America, South America, Oceania) |
-| Latitude_N | Numeric | Degree north (decimal) | Latitude of sampling |
-| Longitude_E | Numeric | Degree east (decimal) | Longitude of sampling |
-| Altitude | Numeric | m | Above-sea-level altitude of the sampling site |
-| StudyYear | Numeric | YYYY | Sampling period (start year – end year) |
-| SampleId | Text | - | Identifier of the measurement; if not provided, constructed from LandType(+_Year) or Tissues(+_Year). Each ID corresponds to one measurement. |
-| LandCover | Text | - | Description of land cover; level of detail varies depending on the article |
-| LandType | Categorical | DBF, ENF, RBF, EBF, Grass, Mixed, Mangrove, Savanna, Shrubs, Urban | Standardized land cover category |
-| Vegetation | Text | - | Plant species reported in the study |
-| Climate | Categorical | Af, Am, Aw, BSh, BWk, BWh, Cfa, Cfb, Csb, Cwa, Cwb, Dfa, Dfb, Dfc, Dwa, Dwb, Dwc | Köppen-Geiger climate classification |
-| AnnualPrecip_Volume_mm | Numerical | mm | Annual precipitation volume; bold values indicate site means reported in the article |
-| MethodLitterfall | Text | - | Litterfall sampling protocol and sampling period |
-| MethodThroughfall | Text | - | Throughfall sampling protocol and sampling period |
-| AnnualThroughfall_Volume_mm | Numeric | mm | Annual throughfall depth |
-| Tissues | Categorical | Total, Needles, Leaves, Fruits, Bark, Misc, Twigs, Lichens | Litterfall plant tissues collected (“Total” = unsorted litterfall) |
-| LitterfallHg_MeanConcentration_ngg | Numerical | ng Hg g⁻¹ dry matter | Mean THg concentration in litterfall, averaged over replicates and sampling period |
-| LitterfallHg_AnnualMeanFlux_ugm2 | Numerical | µg Hg m⁻² yr⁻¹ | Annual THg flux deposited through litterfall |
-| LitterfallMeHg_MeanConcentration_ngg | Numerical | ng MeHg g⁻¹ dry matter | Mean MeHg concentration in litterfall, averaged over replicates and sampling period |
-| LitterfallMeHg_AnnualMeanFlux_ugm2yr | Numerical | µg MeHg m⁻² yr⁻¹ | Annual MeHg flux deposited through litterfall |
-| LitterfallBiomass_gm2yr | Numerical | g dry matter m⁻² yr⁻¹ | Annual biomass flux through litterfall |
-| WVMC_TF_Hg_ngL | Numerical | ng Hg L⁻¹ | Volume-weighted mean concentration of THg in throughfall (reported explicitly in only two studies) |
-| TF_AnnualMeanConcentration_Hg_ngL | Numerical | ng Hg L⁻¹ | Annual mean THg concentration in throughfall |
-| TF_AnnualMeanConcentration_MeHg_ngL | Numerical | ng MeHg L⁻¹ | Annual mean MeHg concentration in throughfall |
-| OpenPrecipitation_AnnualMeanConcentration_Hg_ngL | Numerical | ng Hg L⁻¹ | Annual mean THg concentration in open precipitation |
-| OpenPrecipitation_AnnualMeanFlux_Hg_ugm2yr | Numerical | µg Hg m⁻² yr⁻¹ | Annual mean THg flux in open precipitation |
-| OpenPrecipitation_AnnualMeanConcentration_MeHg_ngL | Numerical | ng MeHg L⁻¹ | Annual mean MeHg concentration in open precipitation |
-| OpenPrecipitation_AnnualMeanFlux_MeHg_ugm2yr | Numerical | µg MeHg m⁻² yr⁻¹ | Annual mean MeHg flux in open precipitation |
-| Flag | Text | - | Additional information about sampling procedure, data quality, or contamination issues |
-| DOI | Text | - | DOI of the article (starting with “10.”) |
+**WOS_search.csv**, contains the results of the Web Of Science search, indicating for each publication whether data were collected and, if not, the reason for exclusion. The seven columns of the WOS_references file are described in detail in Table 1 of the associated manuscript. The references are listed in **WOS_references.bib**.
+
+**MFallDa.csv** contains the collected data, including article sources, location, year of sampling, vegetation type at the sampling site, sampling procedure, tissues types, and THg and MeHg LF and TF concentrations and deposition fluxes. The 34 columns of the MFallDa file are described in detail in Table 2 of the associated manuscript, including units for numerical columns. The references are listed in **MFallDa_references.bib**.
+
+**template_new_data.csv** is a template that provides the required structure for users who wish to contribute new measurements to the database. Each column corresponds to a standardized variable used in the dataset. Please fill in all mandatory fields, as described in Table 2 of the associated manuscript. 
 
 ---
 ## License
